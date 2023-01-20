@@ -1,0 +1,134 @@
+@use '_Variables' as c;
+
+.indexcontainer{
+   height: auto;
+   display: grid ;
+   grid-template-columns: 25fr 25fr 25fr 25fr;
+   grid-template-rows: auto auto auto auto auto;
+   grid-template-areas: 
+
+    "header header header header"
+    "a a a a"
+    "b b b b"
+    "c c c c"
+    "footer footer footer footer"
+    ;
+   
+}
+
+body{
+   background-color: map-get(c.$colores, "Cielo" );
+   
+   
+   
+}
+
+
+
+
+
+
+
+
+
+
+#beneficios__container {
+   background-color: map-get(c.$colores, "Arriba" );
+   width: 100%; 
+   display: flex;
+   flex-direction: column;
+   padding-top: 100px;
+   padding-bottom: 100px;
+   grid-area: a ;
+
+   .titleContainer{
+      align-self: center;
+     
+      .title{
+         font-size: larger;
+         text-align: center;
+      }
+   }
+
+
+   #tarjetasBox{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      
+      
+   }
+}
+
+.tarjetaBen{
+   padding: 20px;
+   background-color:map-get(c.$colores, "Medio" );
+   display: none;
+   
+   &:hover{
+      transform: scale(1.1);
+      transition: .3s;
+      background-color: map-get(c.$colores, "Sobre" );
+   }
+  
+   
+}
+
+
+.textoBen{
+   font-size: medium;
+   text-align: center;
+
+}
+
+.slidercel{
+   display: block;
+}
+
+#Promociones_inicio{
+   background-color: map-get(c.$colores, "Medio" );
+   display: flex;
+   flex-direction:column;
+   align-items: center;
+   grid-area: b;
+   padding-top: 20%;
+   padding-bottom: 20%;
+   
+   #carouselpromo{
+      width: fit-content;
+      height: fit-content;
+   }
+   
+}
+
+
+#promoin1{
+   padding: 20px;
+   background-color:map-get(c.$colores, "Arriba" );
+   display: none;
+
+   &:hover{
+   transform: scale(1.1);
+   transition: .3s;
+   background-color: map-get(c.$colores, "Sobre" );
+
+   }
+
+}
+
+.imgtarj{
+   height: 400px;
+   width: auto;
+}
+
+#video_container_slide{
+   display: none;
+
+}
+.videobox{
+   padding: 20px;
+   background-color: map-get(c.$colores, "Cielo" );
+   
+}
+
+
